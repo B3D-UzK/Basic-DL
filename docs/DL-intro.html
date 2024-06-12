@@ -126,20 +126,16 @@ window.Quarto = {
 <span class="menu-text">DL-Intro</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Aplications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro_pytorch.html"> 
-<span class="menu-text">Intro Pytorch</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./DL-detail.html"> 
 <span class="menu-text">DL-detail</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tensor_playground.html"> 
 <span class="menu-text">Playground</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./intro_pytorch.html"> 
+<span class="menu-text">Intro Pytorch</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Handon1.html"> 
@@ -152,10 +148,6 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="./Handon3.html"> 
 <span class="menu-text">Hand on 3</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Handon4.html"> 
-<span class="menu-text">Hand on 4</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -185,9 +177,14 @@ window.Quarto = {
   <li><a href="#neurons-and-activation-functions" id="toc-neurons-and-activation-functions" class="nav-link" data-scroll-target="#neurons-and-activation-functions">Neurons and Activation Functions</a></li>
   <li><a href="#training-neural-networks" id="toc-training-neural-networks" class="nav-link" data-scroll-target="#training-neural-networks">Training Neural Networks</a></li>
   </ul></li>
-  <li><a href="#applications-of-deep-learning" id="toc-applications-of-deep-learning" class="nav-link" data-scroll-target="#applications-of-deep-learning">Applications of Deep Learning</a>
+  <li><a href="#applications-of-deep-learning-in-astrophysics" id="toc-applications-of-deep-learning-in-astrophysics" class="nav-link" data-scroll-target="#applications-of-deep-learning-in-astrophysics">Applications of Deep Learning in Astrophysics</a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#observation-of-interstellar-medium-ism-and-molecular-clouds" id="toc-observation-of-interstellar-medium-ism-and-molecular-clouds" class="nav-link" data-scroll-target="#observation-of-interstellar-medium-ism-and-molecular-clouds">1. Observation of Interstellar Medium (ISM) and Molecular Clouds</a></li>
+  <li><a href="#high-mass-star-formation" id="toc-high-mass-star-formation" class="nav-link" data-scroll-target="#high-mass-star-formation">2. High-Mass Star Formation</a></li>
+  <li><a href="#simulation-of-high-mass-star-formation" id="toc-simulation-of-high-mass-star-formation" class="nav-link" data-scroll-target="#simulation-of-high-mass-star-formation">3. Simulation of High-Mass Star Formation</a></li>
+  <li><a href="#astrochemistry" id="toc-astrochemistry" class="nav-link" data-scroll-target="#astrochemistry">4. Astrochemistry</a></li>
+  <li><a href="#stellar-feedback" id="toc-stellar-feedback" class="nav-link" data-scroll-target="#stellar-feedback">5. Stellar Feedback</a></li>
+  <li><a href="#galaxy-formation" id="toc-galaxy-formation" class="nav-link" data-scroll-target="#galaxy-formation">6. Galaxy Formation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -255,9 +252,9 @@ window.Quarto = {
 <p>Each layer in an ANN is composed of neurons, which are the basic computational units. Neurons receive input from the previous layer, perform a weighted sum of these inputs, and apply an activation function to produce an output that is passed to the next layer.</p>
 <p>Common activation functions include:</p>
 <ul>
-<li><strong>Sigmoid</strong>: <span class="math display">\[\sigma(x) = \frac{1}{1 + e^{-x}}\]</span> [1]</li>
-<li><strong>Rectified Linear Unit (ReLU)</strong>: <span class="math display">\[f(x) = \max(0, x)\]</span> [1]</li>
-<li><strong>Hyperbolic Tangent (Tanh)</strong>: <span class="math display">\[\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}\]</span> [1]</li>
+<li><strong>Sigmoid</strong>: <span class="math display">\[\sigma(x) = \frac{1}{1 + e^{-x}}\]</span></li>
+<li><strong>Rectified Linear Unit (ReLU)</strong>: <span class="math display">\[f(x) = \max(0, x)\]</span></li>
+<li><strong>Hyperbolic Tangent (Tanh)</strong>: <span class="math display">\[\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}\]</span></li>
 </ul>
 </section>
 <section id="training-neural-networks" class="level3">
@@ -271,26 +268,101 @@ window.Quarto = {
 </ol>
 </section>
 </section>
-<section id="applications-of-deep-learning" class="level2">
-<h2 class="anchored" data-anchor-id="applications-of-deep-learning">Applications of Deep Learning</h2>
-<p>Deep learning has revolutionized various fields by providing state-of-the-art performance in numerous applications, including:</p>
+<section id="applications-of-deep-learning-in-astrophysics" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-deep-learning-in-astrophysics">Applications of Deep Learning in Astrophysics</h2>
+<section id="observation-of-interstellar-medium-ism-and-molecular-clouds" class="level3">
+<h3 class="anchored" data-anchor-id="observation-of-interstellar-medium-ism-and-molecular-clouds">1. Observation of Interstellar Medium (ISM) and Molecular Clouds</h3>
 <ul>
-<li><strong>Computer Vision</strong>: Image classification, object detection, image segmentation (e.g., using Convolutional Neural Networks (CNNs)).</li>
-<li><strong>Natural Language Processing (NLP)</strong>: Language translation, sentiment analysis, text generation (e.g., using Recurrent Neural Networks (RNNs) and Transformers).</li>
-<li><strong>Speech Recognition</strong>: Voice assistants, automated transcription.</li>
-<li><strong>Healthcare</strong>: Disease diagnosis from medical images, personalized treatment recommendations.</li>
-<li><strong>Autonomous Vehicles</strong>: Perception and decision-making systems.</li>
-<li><strong>Astrophysics</strong>: Classifying celestial objects, detecting exoplanets, analyzing the interstellar medium.</li>
+<li><strong>Data Reduction and Noise Filtering</strong>: ML algorithms enhance observational data quality by reducing noise and improving the signal-to-noise ratio in data from radio, infrared, and optical telescopes.
+<ul>
+<li><strong>Reference</strong>: Samuel, H. S., Etim, E. E., Shinggu, J. P., &amp; Bako, B. (2023). Machine learning of Rotational spectra analysis in interstellar medium. <em>Communication in Physical Sciences</em>, 10(1), 172-203.</li>
+</ul></li>
+<li><strong>Feature Extraction</strong>: DL models, such as convolutional neural networks (CNNs), identify and classify structures within the ISM and molecular clouds, such as filaments and cores.
+<ul>
+<li><strong>Reference</strong>: Samuel, H. S., Etim, E. E., Shinggu, J. P., &amp; Bako, B. (2023). Machine learning of Rotational spectra analysis in interstellar medium. <em>Communication in Physical Sciences</em>, 10(1), 172-203.</li>
+</ul></li>
+<li><strong>Anomaly Detection</strong>: ML techniques detect unusual features or events within the ISM, potentially indicating new astrophysical phenomena.
+<ul>
+<li><strong>Reference</strong>: Samuel, H. S., Etim, E. E., Shinggu, J. P., &amp; Bako, B. (2023). Machine learning of Rotational spectra analysis in interstellar medium. <em>Communication in Physical Sciences</em>, 10(1), 172-203.</li>
+</ul></li>
 </ul>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<ol type="1">
-<li>Springer, “Deep Learning: A Comprehensive Overview on Techniques and Applications” (2021)</li>
-<li>Biostrand AI, “AI, ML, DL, and NLP: An Overview” (2022)</li>
-<li>NCBI, “Introduction to Machine Learning, Neural Networks, and Deep Learning” (2020)</li>
-<li>Clive Maxfield, “What the FAQ are AI, ANNs, ML, DL, and DNNs?” (n.d.)</li>
-<li>DataCamp, “Introduction to Deep Neural Networks” (n.d.)</li>
-</ol>
+</section>
+<section id="high-mass-star-formation" class="level3">
+<h3 class="anchored" data-anchor-id="high-mass-star-formation">2. High-Mass Star Formation</h3>
+<ul>
+<li><strong>Data Analysis</strong>: ML models analyze large datasets from observatories to identify regions of high-mass star formation by detecting specific spectral lines and emission features.
+<ul>
+<li><strong>Reference</strong>: Surana, S., Wadadekar, Y., Bait, O., &amp; Bhosale, H. (2020). Predicting star formation properties of galaxies using deep learning. <em>Monthly Notices of the Royal Astronomical Society</em>, 493(4), 4808-4815.</li>
+</ul></li>
+<li><strong>Pattern Recognition</strong>: DL algorithms identify patterns and correlations in the spatial and temporal distribution of high-mass star-forming regions, helping to understand the underlying physical processes.
+<ul>
+<li><strong>Reference</strong>: Surana, S., Wadadekar, Y., Bait, O., &amp; Bhosale, H. (2020). Predicting star formation properties of galaxies using deep learning. <em>Monthly Notices of the Royal Astronomical Society</em>, 493(4), 4808-4815.</li>
+</ul></li>
+<li><strong>Predictive Modeling</strong>: ML models predict the future evolution of star-forming regions based on current observations.
+<ul>
+<li><strong>Reference</strong>: Surana, S., Wadadekar, Y., Bait, O., &amp; Bhosale, H. (2020). Predicting star formation properties of galaxies using deep learning. <em>Monthly Notices of the Royal Astronomical Society</em>, 493(4), 4808-4815.</li>
+</ul></li>
+</ul>
+</section>
+<section id="simulation-of-high-mass-star-formation" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-of-high-mass-star-formation">3. Simulation of High-Mass Star Formation</h3>
+<ul>
+<li><strong>Accelerated Simulations</strong>: ML techniques, such as generative adversarial networks (GANs), enhance the efficiency of high-mass star formation simulations by generating high-fidelity results from lower-resolution inputs.
+<ul>
+<li><strong>Reference</strong>: Bonjean, V., Aghanim, N., Salomé, P., Beelen, A., Douspis, M., &amp; Soubrié, E. (2019). Star formation rates and stellar masses from machine learning. <em>Astronomy &amp; Astrophysics</em>, 621, A51.</li>
+</ul></li>
+<li><strong>Parameter Space Exploration</strong>: ML models explore the vast parameter space of star formation simulations to identify optimal conditions and initial configurations for high-mass star formation.
+<ul>
+<li><strong>Reference</strong>: Bonjean, V., Aghanim, N., Salomé, P., Beelen, A., Douspis, M., &amp; Soubrié, E. (2019). Star formation rates and stellar masses from machine learning. <em>Astronomy &amp; Astrophysics</em>, 621, A51.</li>
+</ul></li>
+</ul>
+</section>
+<section id="astrochemistry" class="level3">
+<h3 class="anchored" data-anchor-id="astrochemistry">4. Astrochemistry</h3>
+<ul>
+<li><strong>Chemical Abundance Mapping</strong>: ML models analyze spectral data to map the distribution of various molecules within molecular clouds and other astrophysical environments.
+<ul>
+<li><strong>Reference</strong>: Xue, B.-X., Barbatti, M., &amp; Dral, P. (2020). Machine learning for absorption cross sections. <em>Journal of Physical Chemistry A</em>, 124(35), 7199-7210.</li>
+</ul></li>
+<li><strong>Reaction Network Analysis</strong>: DL helps in understanding complex chemical networks by identifying key reactions and pathways in the formation and destruction of molecules in space.
+<ul>
+<li><strong>Reference</strong>: Villadsen, T., Ligterink, N. F. W., &amp; Andersen, M. (2022). Predicting binding energies of astrochemically relevant molecules via machine learning. <em>Astronomy &amp; Astrophysics</em>, 666, A45.</li>
+</ul></li>
+<li><strong>Anomaly Detection</strong>: ML algorithms identify unusual chemical compositions or rare molecules, providing insights into unique astrochemical processes.
+<ul>
+<li><strong>Reference</strong>: Lee, K. L. K., Patterson, J., Burkhardt, A. M., Vankayalapati, V., &amp; McCarthy, M. C. (2021). Machine learning of interstellar chemical inventories. <em>Astrophysical Journal Letters</em>, 917(1), L6.</li>
+</ul></li>
+</ul>
+</section>
+<section id="stellar-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="stellar-feedback">5. Stellar Feedback</h3>
+<ul>
+<li><strong>Simulation and Modeling</strong>: DL accelerates simulations of stellar feedback processes, such as supernova explosions and stellar winds, by learning from high-resolution simulations and predicting outcomes for new scenarios.
+<ul>
+<li><strong>Reference</strong>: Surana, S., Wadadekar, Y., Bait, O., &amp; Bhosale, H. (2020). Predicting star formation properties of galaxies using deep learning. <em>Monthly Notices of the Royal Astronomical Society</em>, 493(4), 4808-4815.</li>
+</ul></li>
+<li><strong>Impact Analysis</strong>: ML techniques assess the impact of stellar feedback on surrounding ISM and star formation by analyzing observational data and simulation outputs.
+<ul>
+<li><strong>Reference</strong>: Surana, S., Wadadekar, Y., Bait, O., &amp; Bhosale, H. (2020). Predicting star formation properties of galaxies using deep learning. <em>Monthly Notices of the Royal Astronomical Society</em>, 493(4), 4808-4815.</li>
+</ul></li>
+</ul>
+</section>
+<section id="galaxy-formation" class="level3">
+<h3 class="anchored" data-anchor-id="galaxy-formation">6. Galaxy Formation</h3>
+<ul>
+<li><strong>Morphological Classification</strong>: CNNs classify galaxies based on their shapes and structures from large-scale survey images, aiding in the study of galaxy formation and evolution.
+<ul>
+<li><strong>Reference</strong>: Bonjean, V., Aghanim, N., Salomé, P., Beelen, A., Douspis, M., &amp; Soubrié, E. (2019). Star formation rates and stellar masses from machine learning. <em>Astronomy &amp; Astrophysics</em>, 621, A51.</li>
+</ul></li>
+<li><strong>Merger Detection</strong>: ML algorithms detect galaxy mergers and interactions in observational data and simulations, which are crucial for understanding galaxy formation processes.
+<ul>
+<li><strong>Reference</strong>: Bonjean, V., Aghanim, N., Salomé, P., Beelen, A., Douspis, M., &amp; Soubrié, E. (2019). Star formation rates and stellar masses from machine learning. <em>Astronomy &amp; Astrophysics</em>, 621, A51.</li>
+</ul></li>
+<li><strong>Predictive Modeling</strong>: DL models predict the future evolution of galaxies based on current observations and simulations, helping to test theories of galaxy formation.
+<ul>
+<li><strong>Reference</strong>: Bonjean, V., Aghanim, N., Salomé, P., Beelen, A., Douspis, M., &amp; Soubrié, E. (2019). Star formation rates and stellar masses from machine learning. <em>Astronomy &amp; Astrophysics</em>, 621, A51.</li>
+</ul></li>
+</ul>
 
 
 </section>

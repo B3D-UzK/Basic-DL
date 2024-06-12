@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -124,10 +153,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./Handon3.html"> 
 <span class="menu-text">Hand on 3</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Handon4.html"> 
-<span class="menu-text">Hand on 4</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -147,6 +172,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction-to-tensorflow-playground" id="toc-introduction-to-tensorflow-playground" class="nav-link active" data-scroll-target="#introduction-to-tensorflow-playground">Introduction to TensorFlow Playground</a></li>
   <li><a href="#key-features" id="toc-key-features" class="nav-link" data-scroll-target="#key-features">Key Features</a></li>
   <li><a href="#list-of-hyperparameters-and-settings-in-tensorflow-playground" id="toc-list-of-hyperparameters-and-settings-in-tensorflow-playground" class="nav-link" data-scroll-target="#list-of-hyperparameters-and-settings-in-tensorflow-playground">List of Hyperparameters and Settings in TensorFlow Playground</a></li>
+  <li><a href="#regularization-in-tensorflow-playground" id="toc-regularization-in-tensorflow-playground" class="nav-link" data-scroll-target="#regularization-in-tensorflow-playground">Regularization in TensorFlow Playground</a></li>
   </ul>
 </nav>
     </div>
@@ -215,6 +241,16 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Training Iterations</strong>: Set the number of iterations to train the model.</li>
 </ul></li>
 </ol>
+</section>
+<section id="regularization-in-tensorflow-playground" class="level3">
+<h3 class="anchored" data-anchor-id="regularization-in-tensorflow-playground">Regularization in TensorFlow Playground</h3>
+<p>Regularization is a technique used in machine learning to prevent overfitting by adding a penalty to the loss function. In TensorFlow Playground, two types of regularization are implemented: L1 and L2 regularization.</p>
+<p><strong>L1 Regularization</strong></p>
+<p>L1 regularization adds a penalty equal to the absolute value of the magnitude of coefficients. This can be mathematically represented as: <span class="math display">\[ \text{loss} = \text{original loss} + \lambda \sum |w| \]</span> where $ $ is the regularization rate and $ w $ represents the weights. L1 regularization encourages sparsity in the model, pushing weights towards exactly zero, which can lead to simpler models with fewer active features.</p>
+<p><strong>L2 Regularization</strong></p>
+<p>L2 regularization adds a penalty equal to the square of the magnitude of coefficients. This can be mathematically represented as: <span class="math display">\[ \text{loss} = \text{original loss} + \lambda \sum w^2 \]</span> L2 regularization penalizes large weights more heavily but does not push them to zero, which helps in reducing the model complexity without making it sparse.</p>
+<p><strong>Regularization Rate</strong></p>
+<p>The regularization rate, denoted as $ $, controls the strength of the penalty applied to the loss function. In TensorFlow Playground, the regularization rate can be adjusted to see its effect on the model’s performance. A higher regularization rate increases the penalty, which can prevent the model from overfitting but may also lead to underfitting if set too high.</p>
 
 
 </section>
